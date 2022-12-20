@@ -1,34 +1,24 @@
-import { Toaster } from 'react-hot-toast';
-import { FcContacts, FcList } from 'react-icons/fc';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
+import { Layout } from './Layout';
 
-import { ContactsList, Filter, Form, SubTitle, Title } from '.';
-import { Loader } from './Loader/Loader';
-
-import { Box } from './utils/Box.styled';
+const LoginPage = lazy(() => import('pages/Login'));
+const RegisterPage = lazy(() => import('pages/Register'));
+const HomePage = lazy(() => import('pages/Home'));
+const ContactsPage = lazy(() => import('pages/Contacts'));
 
 export const App = () => {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      mt={10}
-      px={10}
-    >
-      <Title>
-        Phonebook
-        <FcContacts />
-      </Title>
-      <Form />
-      <SubTitle>
-        Contacts
-        <FcList />
-      </SubTitle>
-      <Filter />
-      <Loader />
-      <ContactsList />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
 
-      <Toaster position="top-center" reverseOrder={false} />
-    </Box>
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   );
 };
