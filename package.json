@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://kyzym.github.io/phonebook-rtk-query/",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.14",
+    "@chakra-ui/layout": "^2.1.11",
     "@chakra-ui/react": "^2.4.4",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -22,6 +24,7 @@
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
+    "react-router": "^6.5.0",
     "react-router-dom": "^6.5.0",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
