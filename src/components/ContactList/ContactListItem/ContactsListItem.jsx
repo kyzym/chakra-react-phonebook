@@ -5,7 +5,7 @@ import { DelButton, Name, Number } from './ContactsListItem.styled';
 import { toast } from 'react-hot-toast';
 import { useDeleteContactMutation } from 'redux/contactsSlice';
 
-export const ContactsListItem = ({ contact: { name, phone, id } }) => {
+export const ContactsListItem = ({ contact: { name, number, id } }) => {
   const [deleteContact, { isLoading, isSuccess }] = useDeleteContactMutation();
 
   const handleDelete = () => {
@@ -17,7 +17,7 @@ export const ContactsListItem = ({ contact: { name, phone, id } }) => {
     <>
       <BsPhone size={20} />
       <Name>{name}</Name>
-      <Number>{phone}</Number>
+      <Number>{number}</Number>
       <DelButton onClick={handleDelete} disabled={checkIsDeleted}>
         <MdClose size={24} />
       </DelButton>

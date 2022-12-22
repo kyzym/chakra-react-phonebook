@@ -1,49 +1,26 @@
 import {
+  Input,
+  InputGroup,
+  InputRightElement,
+  Button,
+  Stack,
+  Text,
+  Link,
   Flex,
+  useColorModeValue,
+  Heading,
   Box,
   FormControl,
   FormLabel,
-  Input,
-  InputGroup,
-  HStack,
-  InputRightElement,
-  Stack,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-  Divider,
-  Center,
-  VStack,
 } from '@chakra-ui/react';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+// import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useRegisterUserMutation } from 'redux/contactsSlice';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
-
-function PasswordInput({ name, onChange }) {
-  const [show, setShow] = useState(false);
-  const handleClick = () => setShow(!show);
-
-  return (
-    <InputGroup size="md">
-      <Input
-        pr="4.5rem"
-        type={show ? 'text' : 'password'}
-        placeholder="Enter password"
-        name={name}
-      />
-      <InputRightElement width="4.5rem">
-        <Button h="1.75rem" size="sm" onClick={handleClick}>
-          {show ? 'Hide' : 'Show'}
-        </Button>
-      </InputRightElement>
-    </InputGroup>
-  );
-}
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 export default function SignupCard() {
   const [registerUser] = useRegisterUserMutation();
@@ -58,35 +35,90 @@ export default function SignupCard() {
       email: form.elements.email.value,
       password: form.elements.password.value,
     }).unwrap();
-    console.log(res);
+
     dispatch(setCredentials(res));
+    form.reset();
   };
 
-  return (
-    <Center h="500px">
-      <VStack as="form" spacing="4" onSubmit={handleSignUp}>
-        {/* <Box>Hint: enter anything, or leave it blank and hit login</Box> */}
-        <InputGroup>
-          <Input name="username" type="text" placeholder="User Name" />
-        </InputGroup>
-        <InputGroup>
-          <Input name="email" type="email" placeholder="Email" />
-        </InputGroup>
+  const [showPassword, setShowPassword] = useState(false);
 
-        <InputGroup>
-          <PasswordInput name="password" />
-        </InputGroup>
-        <Button
-          // isFullWidth
-          type="submit"
-          colorScheme="green"
-          // isLoading={isLoading}
-        >
-          Sign Up
-        </Button>
-        <Divider />
-        {/* <ProtectedComponent /> */}
-      </VStack>
-    </Center>
+  return (
+    <>
+      {/* {""} */}
+      <Flex
+        minH={'100vh'}
+        align={'center'}
+        justify={'center'}
+        bg={useColorModeValue('gray.50', 'gray.800')}
+      >
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+          <Stack align={'center'}>
+            <Heading fontSize={'4xl'} textAlign={'center'}>
+              Sign up to your account
+            </Heading>
+            <Text fontSize={'lg'} color={'gray.600'}>
+              to enjoy our cool APP ✌️
+            </Text>
+          </Stack>
+          <Box
+            rounded={'lg'}
+            bg={useColorModeValue('white', 'gray.700')}
+            boxShadow={'lg'}
+            p={8}
+          >
+            <Stack spacing={4} as="form" onSubmit={handleSignUp}>
+              <FormControl id="firstName" isRequired>
+                <FormLabel>Full Name</FormLabel>
+                <Input type="text" name="username" />
+              </FormControl>
+
+              <FormControl id="email" isRequired>
+                <FormLabel>Email address</FormLabel>
+                <Input type="email" name="email" />
+              </FormControl>
+              <FormControl id="password" isRequired>
+                <FormLabel>Password</FormLabel>
+                <InputGroup>
+                  <Input
+                    type={showPassword ? 'text' : 'password'}
+                    name="password"
+                  />
+                  <InputRightElement h={'full'}>
+                    <Button
+                      variant={'ghost'}
+                      onClick={() =>
+                        setShowPassword(showPassword => !showPassword)
+                      }
+                    >
+                      {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                    </Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
+              <Stack spacing={10} pt={2}>
+                <Button
+                  type="submit"
+                  loadingText="Submitting"
+                  size="lg"
+                  bg={'blue.400'}
+                  color={'white'}
+                  _hover={{
+                    bg: 'blue.500',
+                  }}
+                >
+                  Sign up
+                </Button>
+              </Stack>
+              <Stack pt={6}>
+                <Text align={'center'}>
+                  NEED FIX!!!Already a user?{' '}
+                  <Link color={'blue.400'}>Login</Link>
+                </Text>
+              </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Flex>
+    </>
   );
 }

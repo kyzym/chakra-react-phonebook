@@ -1,7 +1,7 @@
 import { ContactsNotification } from 'components';
 import { useSelector } from 'react-redux';
 import { useGetContactsQuery } from 'redux/contactsSlice';
-import { selectFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/filter/selectors';
 import { Box } from '../utils/Box.styled';
 import { ContactsListItem } from './ContactListItem/ContactsListItem';
 import { Contact } from './ContactListItem/ContactsListItem.styled';

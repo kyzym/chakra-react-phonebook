@@ -28,27 +28,27 @@ export const contactsSliceAPI = createApi({
       query: () => ({ url: '/users/logout', method: 'POST' }),
     }),
 
-    // getContacts: builder.query({
-    //   query: () => '/contacts',
-    //   providesTags: ['Contact'],
-    // }),
+    getContacts: builder.query({
+      query: () => '/contacts',
+      providesTags: ['Contact'],
+    }),
 
-    // addContact: builder.mutation({
-    //   query: contacts => ({
-    //     url: '/contacts',
-    //     method: 'POST',
-    //     body: contacts,
-    //   }),
-    //   invalidatesTags: ['Contact'],
-    // }),
+    addContact: builder.mutation({
+      query: contacts => ({
+        url: '/contacts',
+        method: 'POST',
+        body: contacts,
+      }),
+      invalidatesTags: ['Contact'],
+    }),
 
-    // deleteContact: builder.mutation({
-    //   query: contactId => ({
-    //     url: `/contacts/${contactId}`,
-    //     method: 'DELETE',
-    //   }),
-    //   invalidatesTags: ['Contact'],
-    // }),
+    deleteContact: builder.mutation({
+      query: contactId => ({
+        url: `/contacts/${contactId}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Contact'],
+    }),
   }),
 });
 

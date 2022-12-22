@@ -1,53 +1,23 @@
-// import { LoginForm } from 'components/LoginForm/LoginForm';
-
-import * as React from 'react';
 import {
-  Input,
-  InputGroup,
-  InputRightElement,
-  // VStack,
-  Button,
-  // Divider,
-  // Center,
+  Flex,
+  Box,
   FormControl,
   FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
   Stack,
-  useColorModeValue,
-  Box,
+  Button,
   Heading,
   Text,
-  Flex,
-  // Box,
-  // useToast,
+  useColorModeValue,
+  Link,
 } from '@chakra-ui/react';
-
-import { useDispatch } from 'react-redux';
-import { useLogInUserMutation } from 'redux/contactsSlice';
-import { setCredentials } from 'redux/auth/authSlice';
-// import { useNavigate } from 'react-router';
-// import SimpleCard from 'components/SimpleLogin';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
-export const Login = () => {
-  // const toast = useToast();
-  // const [login, { isLoading }] = useLoginMutation();
-
-  const [loginUser] = useLogInUserMutation();
-  const dispatch = useDispatch();
-
-  const handleLogin = async e => {
-    e.preventDefault();
-    const form = e.target;
-    const res = await loginUser({
-      email: form.elements.email.value,
-      password: form.elements.password.value,
-    }).unwrap();
-
-    dispatch(setCredentials(res));
-    form.reset();
-  };
-
+export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -59,9 +29,11 @@ export const Login = () => {
     >
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Sign in to your account </Heading>
+          <Heading fontSize={'4xl'} textAlign={'center'}>
+            Sign up
+          </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy your Phone Book✌️
+            to enjoy all of our cool features ✌️
           </Text>
         </Stack>
         <Box
@@ -70,18 +42,29 @@ export const Login = () => {
           boxShadow={'lg'}
           p={8}
         >
-          <Stack spacing={4} as="form" onSubmit={handleLogin}>
+          <Stack spacing={4}>
+            <HStack>
+              <Box>
+                <FormControl id="firstName" isRequired>
+                  <FormLabel>First Name</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+              </Box>
+              <Box>
+                <FormControl id="lastName">
+                  <FormLabel>Last Name</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+              </Box>
+            </HStack>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" name="email" />
+              <Input type="email" />
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
-                <Input
-                  type={showPassword ? 'text' : 'password'}
-                  name="password"
-                />
+                <Input type={showPassword ? 'text' : 'password'} />
                 <InputRightElement h={'full'}>
                   <Button
                     variant={'ghost'}
@@ -94,28 +77,27 @@ export const Login = () => {
                 </InputRightElement>
               </InputGroup>
             </FormControl>
-            <Stack spacing={5}>
-              <Stack
-                direction={{ base: 'column', sm: 'row' }}
-                align={'start'}
-                justify={'space-between'}
-              ></Stack>
+            <Stack spacing={10} pt={2}>
               <Button
-                type="submit"
+                loadingText="Submitting"
+                size="lg"
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
                   bg: 'blue.500',
                 }}
               >
-                Sign in
+                Sign up
               </Button>
+            </Stack>
+            <Stack pt={6}>
+              <Text align={'center'}>
+                Already a user? <Link color={'blue.400'}>Login</Link>
+              </Text>
             </Stack>
           </Stack>
         </Box>
       </Stack>
     </Flex>
   );
-};
-
-export default Login;
+}

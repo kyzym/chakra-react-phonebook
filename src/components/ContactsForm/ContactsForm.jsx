@@ -30,7 +30,7 @@ export const Form = () => {
       });
     }
 
-    addContact({ name: nameValue, phone: numberValue });
+    addContact({ name: nameValue, number: numberValue });
     toast.success('Superrr!!! Contact added');
 
     form.reset();
