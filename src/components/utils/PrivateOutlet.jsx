@@ -1,13 +1,13 @@
 import { useIsLoggedIn } from 'hooks/hooks';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
-export function PrivateOutlet() {
+export function PrivateRoute({ children }) {
   const { isLoggedIn } = useIsLoggedIn();
 
   const location = useLocation();
 
   return isLoggedIn ? (
-    <Outlet />
+    children
   ) : (
     <Navigate to="/login" state={{ from: location }} />
   );
