@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout';
-import { PrivateRoute } from './utils/PrivateRoute';
-import { RestrictedRoute } from './utils/RestrictedRoute';
+import { PrivateRoute } from './routes/PrivateRoute';
+import { RestrictedRoute } from './routes/RestrictedRoute';
 
 const LoginPage = lazy(() => import('pages/Login'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -14,7 +14,6 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index path="/" element={<HomePage />} />
-
         <Route
           path="register"
           element={
@@ -32,6 +31,7 @@ export const App = () => {
             </RestrictedRoute>
           }
         />
+
         <Route
           path="contacts"
           element={

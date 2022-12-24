@@ -3,3 +3,4 @@ export * from './Filter/Filter';
 export * from './ContactsForm/ContactForm.styled';
 export * from './ContactsForm/ContactsForm';
 export * from './Notification/Notification';
+export * from './RegisterForm/RegisterForm';
