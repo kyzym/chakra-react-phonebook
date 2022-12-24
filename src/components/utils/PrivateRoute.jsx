@@ -1,8 +1,8 @@
-import { useIsLoggedIn } from 'hooks/hooks';
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { useAuth } from 'hooks/hooks';
+import { Navigate, useLocation } from 'react-router-dom';
 
 export function PrivateRoute({ children }) {
-  const { isLoggedIn } = useIsLoggedIn();
+  const { isLoggedIn } = useAuth();
 
   const location = useLocation();
 

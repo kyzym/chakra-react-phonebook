@@ -21,6 +21,8 @@ import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
+import { NavLink } from 'react-router-dom';
+
 export default function SignupCard() {
   const [registerUser] = useRegisterUserMutation();
   const dispatch = useDispatch();
@@ -65,13 +67,13 @@ export default function SignupCard() {
         >
           <Stack spacing={4} as="form" onSubmit={handleSignUp}>
             <FormControl id="firstName" isRequired>
-              <FormLabel>Full Name</FormLabel>
-              <Input type="text" name="username" />
+              <FormLabel>Nickname</FormLabel>
+              <Input type="text" name="username" placeholder="Sara Repetovna" />
             </FormControl>
 
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" name="email" />
+              <Input type="email" name="email" placeholder="email@mail.com" />
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
@@ -79,6 +81,8 @@ export default function SignupCard() {
                 <Input
                   type={showPassword ? 'text' : 'password'}
                   name="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                  placeholder="7 characters or more, please"
                 />
                 <InputRightElement h={'full'}>
                   <Button
@@ -108,7 +112,10 @@ export default function SignupCard() {
             </Stack>
             <Stack pt={1}>
               <Text align={'center'}>
-                NEED FIX!!!Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user?
+                <Link as={NavLink} to="/login" color={'blue.400'}>
+                  Login
+                </Link>
               </Text>
             </Stack>
           </Stack>

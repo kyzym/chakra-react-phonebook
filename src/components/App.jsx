@@ -1,7 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout';
-import { PrivateRoute } from './utils/PrivateOutlet';
+import { PrivateRoute } from './utils/PrivateRoute';
+import { RestrictedRoute } from './utils/RestrictedRoute';
 
 const LoginPage = lazy(() => import('pages/Login'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -12,12 +13,27 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+        <Route index path="/" element={<HomePage />} />
 
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
         <Route
-          path="/contacts"
+          path="register"
+          element={
+            <RestrictedRoute>
+              <RegisterPage />
+            </RestrictedRoute>
+          }
+        />
+
+        <Route
+          path="login"
+          element={
+            <RestrictedRoute>
+              <LoginPage />
+            </RestrictedRoute>
+          }
+        />
+        <Route
+          path="contacts"
           element={
             <PrivateRoute>
               <ContactsPage />

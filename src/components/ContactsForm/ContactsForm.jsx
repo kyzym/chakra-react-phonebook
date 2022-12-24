@@ -1,14 +1,14 @@
-import toast from 'react-hot-toast';
-
 import {
   useAddContactMutation,
   useGetContactsQuery,
 } from 'redux/contactsSlice';
 
 import { Button, FormTag, Input, Label } from './ContactForm.styled';
+import { useToast } from '@chakra-ui/react';
 
 export const Form = () => {
   const { data: contacts } = useGetContactsQuery();
+  const toast = useToast();
 
   const [addContact, { isLoading }] = useAddContactMutation();
 
@@ -25,13 +25,22 @@ export const Form = () => {
       )
     ) {
       form.reset();
-      return toast("Can't add already existing contact", {
-        icon: '😭',
+      return toast({
+        position: 'top-center',
+        title: `Can't add already existing contact 😭`,
+        status: 'info',
+        isClosable: true,
       });
     }
 
     addContact({ name: nameValue, number: numberValue });
-    toast.success('Superrr!!! Contact added');
+
+    toast({
+      position: 'top',
+      title: 'Superrr!!! Contact added 🥳',
+      status: 'success',
+      isClosable: true,
+    });
 
     form.reset();
   };
@@ -60,7 +69,6 @@ export const Form = () => {
           placeholder="Enter number"
         />
       </Label>
-
       <Button type="submit" disabled={isLoading}>
         add contact
       </Button>

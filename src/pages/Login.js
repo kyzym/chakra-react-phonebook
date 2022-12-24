@@ -81,6 +81,8 @@ export const Login = () => {
                 <Input
                   type={showPassword ? 'text' : 'password'}
                   name="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                  placeholder="7 characters or more, please"
                 />
                 <InputRightElement h={'full'}>
                   <Button
