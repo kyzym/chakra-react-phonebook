@@ -2,7 +2,6 @@ import { ContactsList, Filter, Form, SubTitle, Title } from 'components';
 import { Loader } from 'components/Loader/Loader';
 import { Box } from 'components/utils/Box.styled';
 import { FcContacts, FcList } from 'react-icons/fc';
-// import { Form } from 'components/ContactsForm/ContactsForm';
 
 export default function Contacts() {
   return (

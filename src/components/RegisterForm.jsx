@@ -1,23 +1,18 @@
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Box, Flex, Heading, Link, Stack, Text } from '@chakra-ui/layout';
 import {
-  Flex,
-  Box,
+  Button,
   FormControl,
   FormLabel,
   Input,
   InputGroup,
-  HStack,
   InputRightElement,
-  Stack,
-  Button,
-  Heading,
-  Text,
   useColorModeValue,
-  Link,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { NavLink } from 'react-router-dom';
 
-export default function SignupCard() {
+export const RegisterForm = ({ handleSignUp }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -30,10 +25,10 @@ export default function SignupCard() {
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
-            Sign up
+            Sign up to your account
           </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool features ✌️
+            to enjoy our cool APP ✌️
           </Text>
         </Stack>
         <Box
@@ -42,29 +37,25 @@ export default function SignupCard() {
           boxShadow={'lg'}
           p={8}
         >
-          <Stack spacing={4}>
-            <HStack>
-              <Box>
-                <FormControl id="firstName" isRequired>
-                  <FormLabel>First Name</FormLabel>
-                  <Input type="text" />
-                </FormControl>
-              </Box>
-              <Box>
-                <FormControl id="lastName">
-                  <FormLabel>Last Name</FormLabel>
-                  <Input type="text" />
-                </FormControl>
-              </Box>
-            </HStack>
+          <Stack spacing={4} as="form" onSubmit={handleSignUp}>
+            <FormControl id="firstName" isRequired>
+              <FormLabel>Nickname</FormLabel>
+              <Input type="text" name="username" placeholder="Sara Repetovna" />
+            </FormControl>
+
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" name="email" placeholder="email@mail.com" />
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'} />
+                <Input
+                  type={showPassword ? 'text' : 'password'}
+                  name="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                  placeholder="7 characters or more, please"
+                />
                 <InputRightElement h={'full'}>
                   <Button
                     variant={'ghost'}
@@ -79,6 +70,7 @@ export default function SignupCard() {
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
+                type="submit"
                 loadingText="Submitting"
                 size="lg"
                 bg={'blue.400'}
@@ -90,9 +82,12 @@ export default function SignupCard() {
                 Sign up
               </Button>
             </Stack>
-            <Stack pt={6}>
+            <Stack pt={1}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user?
+                <Link as={NavLink} to="/login" color={'blue.400'}>
+                  Login
+                </Link>
               </Text>
             </Stack>
           </Stack>
@@ -100,4 +95,4 @@ export default function SignupCard() {
       </Stack>
     </Flex>
   );
-}
+};

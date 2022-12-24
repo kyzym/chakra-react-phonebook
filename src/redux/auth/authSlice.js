@@ -11,13 +11,11 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setCredentials: (state, { payload: { user, token } }) => {
-      // console.log(state, 'state in setCredentials');
       state.user = user;
       state.token = token;
       state.isLoggedIn = true;
     },
     unsetCredentials: (state, _) => {
-      // console.log(state, 'state in UNsetCredentials');
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
