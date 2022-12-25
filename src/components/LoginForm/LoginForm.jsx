@@ -20,7 +20,7 @@ export const LoginForm = ({ handleLogin }) => {
 
   return (
     <Flex
-      minH={'100vh'}
+      minH={'70vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
@@ -40,13 +40,19 @@ export const LoginForm = ({ handleLogin }) => {
         >
           <Stack spacing={4} as="form" onSubmit={handleLogin}>
             <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" name="email" />
+              <FormLabel fontSize={'xl'}>Email address</FormLabel>
+              <Input
+                size="lg"
+                type="email"
+                name="email"
+                placeholder="enter your cool email"
+              />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
+              <FormLabel fontSize={'xl'}>Password</FormLabel>
               <InputGroup>
                 <Input
+                  size="lg"
                   type={showPassword ? 'text' : 'password'}
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
@@ -71,6 +77,7 @@ export const LoginForm = ({ handleLogin }) => {
                 justify={'space-between'}
               ></Stack>
               <Button
+                fontSize={'xl'}
                 type="submit"
                 bg={'blue.400'}
                 color={'white'}

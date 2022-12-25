@@ -17,7 +17,7 @@ export const RegisterForm = ({ handleSignUp }) => {
 
   return (
     <Flex
-      minH={'100vh'}
+      minH={'70vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
@@ -39,18 +39,29 @@ export const RegisterForm = ({ handleSignUp }) => {
         >
           <Stack spacing={4} as="form" onSubmit={handleSignUp}>
             <FormControl id="firstName" isRequired>
-              <FormLabel>Nickname</FormLabel>
-              <Input type="text" name="username" placeholder="Sara Repetovna" />
+              <FormLabel fontSize={'xl'}>Nickname</FormLabel>
+              <Input
+                size="lg"
+                type="text"
+                name="username"
+                placeholder="Sara Repetovna"
+              />
             </FormControl>
 
             <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" name="email" placeholder="email@mail.com" />
+              <FormLabel fontSize={'xl'}>Email address</FormLabel>
+              <Input
+                size="lg"
+                type="email"
+                name="email"
+                placeholder="email@mail.com"
+              />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
+              <FormLabel fontSize={'xl'}>Password</FormLabel>
               <InputGroup>
                 <Input
+                  size="lg"
                   type={showPassword ? 'text' : 'password'}
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
@@ -73,6 +84,7 @@ export const RegisterForm = ({ handleSignUp }) => {
                 type="submit"
                 loadingText="Submitting"
                 size="lg"
+                fontSize={'xl'}
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
@@ -83,9 +95,15 @@ export const RegisterForm = ({ handleSignUp }) => {
               </Button>
             </Stack>
             <Stack pt={1}>
-              <Text align={'center'}>
+              <Text align={'center'} fontSize={'xl'}>
                 Already a user?
-                <Link as={NavLink} to="/login" color={'blue.400'}>
+                <Link
+                  as={NavLink}
+                  to="/login"
+                  color={'blue.400'}
+                  fontSize={'2xl'}
+                  ml="1"
+                >
                   Login
                 </Link>
               </Text>

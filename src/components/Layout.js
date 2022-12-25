@@ -2,12 +2,12 @@ import { Outlet } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AppBar } from './AppBar/AppBar';
 import { Suspense } from 'react';
-import { Divider } from '@chakra-ui/layout';
+import { Box, Divider } from '@chakra-ui/layout';
 import Footer from './Footer/Footer';
 
 export const Layout = () => {
   return (
-    <div>
+    <Box name="LayoutWrapper" display="flex" flexDir="column" h="100%-50%">
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />
@@ -15,6 +15,6 @@ export const Layout = () => {
       <Divider />
       <Footer />
       <Toaster position="top-right" reverseOrder={false} />
-    </div>
+    </Box>
   );
 };
