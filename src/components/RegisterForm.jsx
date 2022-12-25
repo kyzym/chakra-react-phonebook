@@ -18,7 +18,7 @@ export const RegisterForm = ({ handleSignUp }) => {
 
   return (
     <Flex
-      minH={{ base: '78vh', md: '83.7vh', lg: '84vh' }}
+      minH={{ base: '78vh', md: '83.7vh', lg: '85vh' }}
       align={'center'}
       justify={'center'}
       bg={bgColor}

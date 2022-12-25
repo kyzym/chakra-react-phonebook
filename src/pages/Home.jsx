@@ -9,7 +9,7 @@ export default function Home() {
       as="section"
       className="home"
       bg={bgColor}
-      minH={{ base: '78vh', md: '83.7vh', lg: '84vh' }}
+      minH={{ base: '78vh', md: '83.7vh', lg: '85vh' }}
     >
       <CallToActionWithIllustration />
     </Box>
