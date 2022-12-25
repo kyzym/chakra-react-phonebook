@@ -22,14 +22,14 @@ export const LoginForm = ({ handleLogin }) => {
 
   return (
     <Flex
-      minH={'70vh'}
+      minH={'30vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
     >
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack spacing={3} mx={'auto'} maxW={'lg'} py={6} px={3}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Sign in to your account </Heading>
+          <Heading fontSize={'2xl'}>Sign in to your account </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
             to enjoy your Phone Book✌️
           </Text>
@@ -40,9 +40,9 @@ export const LoginForm = ({ handleLogin }) => {
           boxShadow={'lg'}
           p={8}
         >
-          <Stack spacing={4} as="form" onSubmit={handleLogin}>
+          <Stack spacing={2} as="form" onSubmit={handleLogin}>
             <FormControl id="email" isRequired>
-              <FormLabel fontSize={'xl'}>Email address</FormLabel>
+              <FormLabel>Email address</FormLabel>
               <Input
                 size="lg"
                 type="email"
@@ -51,7 +51,7 @@ export const LoginForm = ({ handleLogin }) => {
               />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel fontSize={'xl'}>Password</FormLabel>
+              <FormLabel>Password</FormLabel>
               <InputGroup>
                 <Input
                   size="lg"
@@ -72,14 +72,13 @@ export const LoginForm = ({ handleLogin }) => {
                 </InputRightElement>
               </InputGroup>
             </FormControl>
-            <Stack spacing={5}>
+            <Stack spacing={2}>
               <Stack
                 direction={{ base: 'column', sm: 'row' }}
                 align={'start'}
                 justify={'space-between'}
               ></Stack>
               <Button
-                fontSize={'xl'}
                 type="submit"
                 bg={'blue.400'}
                 color={'white'}
@@ -91,13 +90,13 @@ export const LoginForm = ({ handleLogin }) => {
               </Button>
             </Stack>
             <Stack pt={1}>
-              <Text align={'center'} fontSize={'xl'}>
+              <Text align={'center'}>
                 Need an account? Register now!
                 <Link
                   as={NavLink}
                   to="/register"
                   color={'blue.400'}
-                  fontSize={'2xl'}
+                  fontSize={'lg'}
                   ml="1"
                 >
                   Sign Up

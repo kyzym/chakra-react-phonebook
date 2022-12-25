@@ -17,14 +17,14 @@ export const RegisterForm = ({ handleSignUp }) => {
 
   return (
     <Flex
-      minH={'70vh'}
+      minH={'30vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
     >
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack spacing={3} mx={'auto'} maxW={'lg'} py={6} px={3}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'} textAlign={'center'}>
+          <Heading fontSize={'2xl'} textAlign={'center'}>
             Sign up to your account
           </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
@@ -37,11 +37,11 @@ export const RegisterForm = ({ handleSignUp }) => {
           boxShadow={'lg'}
           p={8}
         >
-          <Stack spacing={4} as="form" onSubmit={handleSignUp}>
+          <Stack spacing={2} as="form" onSubmit={handleSignUp}>
             <FormControl id="firstName" isRequired>
-              <FormLabel fontSize={'xl'}>Nickname</FormLabel>
+              <FormLabel>Nickname</FormLabel>
               <Input
-                size="lg"
+                size="md"
                 type="text"
                 name="username"
                 placeholder="Sara Repetovna"
@@ -49,19 +49,19 @@ export const RegisterForm = ({ handleSignUp }) => {
             </FormControl>
 
             <FormControl id="email" isRequired>
-              <FormLabel fontSize={'xl'}>Email address</FormLabel>
+              <FormLabel>Email address</FormLabel>
               <Input
-                size="lg"
+                size="md"
                 type="email"
                 name="email"
                 placeholder="email@mail.com"
               />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel fontSize={'xl'}>Password</FormLabel>
+              <FormLabel>Password</FormLabel>
               <InputGroup>
                 <Input
-                  size="lg"
+                  size="md"
                   type={showPassword ? 'text' : 'password'}
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
@@ -79,12 +79,12 @@ export const RegisterForm = ({ handleSignUp }) => {
                 </InputRightElement>
               </InputGroup>
             </FormControl>
-            <Stack spacing={10} pt={2}>
+            <Stack pt={2}>
               <Button
                 type="submit"
                 loadingText="Submitting"
-                size="lg"
-                fontSize={'xl'}
+                size="md"
+                fontSize={'md'}
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
@@ -95,13 +95,13 @@ export const RegisterForm = ({ handleSignUp }) => {
               </Button>
             </Stack>
             <Stack pt={1}>
-              <Text align={'center'} fontSize={'xl'}>
+              <Text align={'center'} fontSize={'md'}>
                 Already a user?
                 <Link
                   as={NavLink}
                   to="/login"
                   color={'blue.400'}
-                  fontSize={'2xl'}
+                  fontSize={'lg'}
                   ml="1"
                 >
                   Login
