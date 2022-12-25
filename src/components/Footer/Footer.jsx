@@ -15,8 +15,8 @@ const SocialButton = ({ children, label, href }) => {
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       target="_blank"
       rounded={'full'}
-      w={12}
-      h={12}
+      w={6}
+      h={6}
       cursor={'pointer'}
       as={'a'}
       href={href}
@@ -51,7 +51,7 @@ export default function Footer() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text fontSize={'xl'} as="b">
+        <Text fontSize={'l'} as="b">
           2022 Denys Kyzym 😉
         </Text>
         <Stack direction={'row'} spacing={6}>

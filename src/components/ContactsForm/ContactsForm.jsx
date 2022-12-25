@@ -53,9 +53,9 @@ export const Form = () => {
 
   return (
     <>
-      <Stack as="form" spacing={4} onSubmit={handleAddContact}>
+      <Stack as="form" spacing={2} onSubmit={handleAddContact} mb={4}>
         <InputGroup>
-          <InputLeftAddon children="Name:" w="6rem" fontSize="1.2em" />
+          <InputLeftAddon children="Name:" w="5.2rem" fontSize="1em" />
           <Input
             type="text"
             name="name"
@@ -63,12 +63,12 @@ export const Form = () => {
             title="Only letters, apostrophe, dash and spaces."
             required
             placeholder="Enter name"
-            w={{ base: '17rem', lg: '20rem' }}
-            fontSize="1.2em"
+            w={{ base: '17rem', lg: '17rem' }}
+            fontSize="1em"
           />
         </InputGroup>
         <InputGroup>
-          <InputLeftAddon children="Number:" w="6rem" fontSize="1.2em" />
+          <InputLeftAddon children="Number:" w="5.2rem" fontSize="1em" />
           <Input
             type="tel"
             name="number"
@@ -76,11 +76,11 @@ export const Form = () => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             placeholder="Enter phone number"
-            w={{ base: '17rem', lg: '20rem' }}
-            fontSize="1.2em"
+            w={{ base: '15rem', lg: '17rem' }}
+            fontSize="1em"
           />
         </InputGroup>
-        <Button type="submit" disabled={isLoading} fontSize={'xl'}>
+        <Button type="submit" disabled={isLoading} fontSize={'l'}>
           Add contact
         </Button>
       </Stack>

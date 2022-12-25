@@ -8,7 +8,7 @@ export const Navigation = () => {
 
   return (
     <Flex>
-      <HomeBTN />
+      {!isLoggedIn && <HomeBTN />}
       {isLoggedIn && <ContactsBTN />}
     </Flex>
   );

@@ -19,9 +19,9 @@ export const UserMenu = () => {
 
   return (
     <Flex align="center" gap={'12px'}>
-      <Text fontSize="lg" ml={2} fontWeight="bold">
+      <Text ml={2} fontWeight="bold">
         Welcome
-        <Badge ml="1" fontSize="1.2em" variant="subtle" colorScheme="green">
+        <Badge ml="1" fontSize="1em" variant="subtle" colorScheme="green">
           {user.name}
         </Badge>
       </Text>

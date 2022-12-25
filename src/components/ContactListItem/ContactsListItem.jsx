@@ -17,7 +17,7 @@ export const ContactsListItem = ({ contact: { name, number, id } }) => {
       <Text
         ml={'5%'}
         mr={'auto'}
-        fontSize={{ md: 'xl', lg: '3xl' }}
+        fontSize={{ md: 'l', lg: 'l' }}
         fontWeight={'500'}
       >
         {name}
@@ -26,12 +26,12 @@ export const ContactsListItem = ({ contact: { name, number, id } }) => {
         ml={'auto'}
         mr={'5%'}
         fontWeight={'500'}
-        fontSize={{ md: 'xl', lg: '3xl' }}
+        fontSize={{ md: 'l', lg: 'l' }}
       >
         {number}
       </Text>
       <Button onClick={handleDelete} disabled={checkIsDeleted} color="#f44336">
-        <BsTrash size={30} />
+        <BsTrash size={20} />
       </Button>
     </>
   );

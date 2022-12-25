@@ -13,7 +13,15 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index path="/" element={<HomePage />} />
+        <Route
+          index
+          path="/"
+          element={
+            <RestrictedRoute>
+              <HomePage />
+            </RestrictedRoute>
+          }
+        />
         <Route
           path="register"
           element={

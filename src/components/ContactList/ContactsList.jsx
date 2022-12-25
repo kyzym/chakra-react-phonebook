@@ -20,7 +20,7 @@ export const ContactsList = () => {
 
   return (
     <>
-      <List spacing={3} w={{ md: '550px', lg: '650px' }}>
+      <List spacing={2} w={{ md: '430px', lg: '450px' }}>
         {visibleContacts.map(contact => (
           <ListItem
             key={contact.id}
@@ -30,7 +30,7 @@ export const ContactsList = () => {
           >
             <ListIcon
               as={BsPhone}
-              boxSize={{ md: 6, lg: 8 }}
+              boxSize={{ md: 5, lg: 6 }}
               color="blue.500"
             />
             <ContactsListItem contact={contact} />

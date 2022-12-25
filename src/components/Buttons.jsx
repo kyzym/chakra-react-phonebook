@@ -16,7 +16,7 @@ export const HomeBTN = () => {
       as={NavLink}
       to="/"
       display={'inline-flex'}
-      fontSize={'xl'}
+      fontSize={'l'}
       fontWeight={600}
       color={color}
       bg={bgColor}
@@ -37,7 +37,7 @@ export const ContactsBTN = () => {
       as={NavLink}
       to="/contacts"
       display={'inline-flex'}
-      fontSize={'xl'}
+      fontSize={'l'}
       fontWeight={600}
       color={'black'}
       bg={'blue.100'}
@@ -62,7 +62,7 @@ export const RegisterBTN = () => {
       as={NavLink}
       to="/register"
       display={'inline-flex'}
-      fontSize={'xl'}
+      fontSize={'l'}
       fontWeight={600}
       color={color}
       bg={bgColor}
@@ -84,7 +84,7 @@ export const LoginBTN = () => {
     <Button
       as={NavLink}
       to="/login"
-      fontSize={'xl'}
+      fontSize={'l'}
       fontWeight={600}
       color={color}
       bg={bgColor}
@@ -107,7 +107,7 @@ export const LogoutBTN = ({ handleLogOut }) => {
     <Button
       onClick={handleLogOut}
       display={'inline-flex'}
-      fontSize={'xl'}
+      fontSize={'l'}
       fontWeight={600}
       color={color}
       bg={bgColor}
@@ -124,7 +124,7 @@ export const LogoutBTN = ({ handleLogOut }) => {
 export const SwitchColorModeBTN = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Stack direction={'row'} spacing={7} ml={1}>
+    <Stack direction={'row'} spacing={4} ml={1}>
       <Button
         onClick={toggleColorMode}
         _hover={{
@@ -146,7 +146,7 @@ export const HeroSignButtons = () => {
         to="/login"
         color="white"
         px={12}
-        fontSize={{ base: 'xl', md: '2xl' }}
+        fontSize={{ base: 'l', md: 'xl' }}
         bg={'blue.400'}
         _hover={{ bg: 'blue.500' }}
       >
@@ -155,7 +155,7 @@ export const HeroSignButtons = () => {
       <Button
         as={Link}
         to="/register"
-        fontSize={{ base: 'xl', md: '2xl' }}
+        fontSize={{ base: 'l', md: 'xl' }}
         color="white"
         px={12}
         bg={'blue.400'}

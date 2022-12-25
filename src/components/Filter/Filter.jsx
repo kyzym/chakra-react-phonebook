@@ -14,13 +14,14 @@ export const Filter = () => {
   return (
     <Flex>
       <InputGroup>
-        <InputLeftAddon children="Find contacts :" fontSize="1.2em" />
+        <InputLeftAddon children="Find contacts :" fontSize="1em" />
         <Input
           type="text"
           name="filter"
           placeholder="Enter name"
           onChange={handleChange}
-          fontSize="1.2em"
+          fontSize="1em"
+          mb={2}
         />
       </InputGroup>
     </Flex>
