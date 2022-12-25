@@ -2,9 +2,11 @@ import { ContactsNotification } from 'components';
 import { useSelector } from 'react-redux';
 import { useGetContactsQuery } from 'redux/contactsSlice';
 import { selectFilter } from 'redux/filter/selectors';
-import { Box } from '../utils/Box.styled';
+
 import { ContactsListItem } from '../ContactListItem/ContactsListItem';
-import { Contact } from '../ContactListItem/ContactsListItem.styled';
+
+import { List, ListIcon, ListItem } from '@chakra-ui/layout';
+import { BsPhone } from 'react-icons/bs';
 
 export const ContactsList = () => {
   const filter = useSelector(selectFilter);
@@ -17,12 +19,24 @@ export const ContactsList = () => {
   );
 
   return (
-    <Box as="ul" width="430px">
-      {visibleContacts.map(contact => (
-        <Contact key={contact.id}>
-          <ContactsListItem contact={contact} />
-        </Contact>
-      ))}
+    <>
+      <List spacing={3} w={{ md: '550px', lg: '650px' }}>
+        {visibleContacts.map(contact => (
+          <ListItem
+            key={contact.id}
+            w="100%"
+            display="flex"
+            alignItems="center"
+          >
+            <ListIcon
+              as={BsPhone}
+              boxSize={{ md: 6, lg: 8 }}
+              color="blue.500"
+            />
+            <ContactsListItem contact={contact} />
+          </ListItem>
+        ))}
+      </List>
 
       {!isLoading && (
         <ContactsNotification
@@ -30,6 +44,6 @@ export const ContactsList = () => {
           savedContactsNumber={contacts.length}
         />
       )}
-    </Box>
+    </>
   );
 };

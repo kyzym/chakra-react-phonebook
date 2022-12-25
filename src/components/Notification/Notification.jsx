@@ -1,4 +1,4 @@
-import { Box } from 'components/utils/Box.styled';
+import { Box, Text } from '@chakra-ui/layout';
 
 export const ContactsNotification = ({
   visibleContacts,
@@ -7,13 +7,13 @@ export const ContactsNotification = ({
   return (
     <Box textAlign="center">
       {savedContactsNumber !== visibleContacts ? (
-        <span>
+        <Text>
           Found contacts: <b>{visibleContacts}</b>
-        </span>
+        </Text>
       ) : (
-        <span>
+        <Text>
           Total number of contacts: <b>{savedContactsNumber}</b>
-        </span>
+        </Text>
       )}
     </Box>
   );

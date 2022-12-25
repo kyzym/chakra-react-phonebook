@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { filterList } from 'redux/filter/filtersSlice';
-import { FilterInput, FilterLabel } from './Filter.styled';
+import { Flex, Input, InputGroup, InputLeftAddon } from '@chakra-ui/react';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -12,15 +12,17 @@ export const Filter = () => {
   };
 
   return (
-    <FilterLabel>
-      Find contacts by name:
-      <FilterInput
-        type="text"
-        name="filter"
-        placeholder="Enter name"
-        debounceTimeout={300}
-        onChange={handleChange}
-      ></FilterInput>
-    </FilterLabel>
+    <Flex>
+      <InputGroup>
+        <InputLeftAddon children="Find contacts :" fontSize="1.2em" />
+        <Input
+          type="text"
+          name="filter"
+          placeholder="Enter name"
+          onChange={handleChange}
+          fontSize="1.2em"
+        />
+      </InputGroup>
+    </Flex>
   );
 };

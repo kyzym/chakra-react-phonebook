@@ -4,6 +4,7 @@ import {
 } from 'redux/contactsSlice';
 
 import {
+  Button,
   Input,
   InputGroup,
   InputLeftAddon,
@@ -79,9 +80,9 @@ export const Form = () => {
             fontSize="1.2em"
           />
         </InputGroup>
-        <button type="submit" disabled={isLoading}>
-          add contact
-        </button>
+        <Button type="submit" disabled={isLoading} fontSize={'xl'}>
+          Add contact
+        </Button>
       </Stack>
     </>
   );
