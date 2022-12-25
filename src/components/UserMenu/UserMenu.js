@@ -3,7 +3,7 @@ import css from './UserMenu.module.css';
 import { contactsSliceAPI, useLogOutUserMutation } from 'redux/contactsSlice';
 import { unsetCredentials } from 'redux/auth/authSlice';
 import { useDispatch } from 'react-redux';
-import { Flex } from '@chakra-ui/layout';
+import { Badge, Flex } from '@chakra-ui/layout';
 import { Button, Text } from '@chakra-ui/react';
 import { LogoutBTN } from 'components/NavBtns/NavBtns';
 
@@ -20,9 +20,13 @@ export const UserMenu = () => {
 
   return (
     <Flex align="center" gap={'12px'}>
-      <Text fontSize="lg" as="b">
-        Welcome, {user.name}
+      <Text fontSize="lg" fontWeight="bold">
+        Welcome
+        <Badge ml="1" fontSize="1.2em" variant="subtle" colorScheme="green">
+          {user.name}
+        </Badge>
       </Text>
+
       <LogoutBTN handleLogOut={handleLogOut} />
     </Flex>
   );
