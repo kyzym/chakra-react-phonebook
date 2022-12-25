@@ -9,7 +9,7 @@ export default function Contacts() {
 
   return (
     <Flex
-      minH={{ base: '75vh', md: '83.7vh', lg: '81vh' }}
+      minH={{ base: '75vh', md: '83.7vh', lg: '84vh' }}
       name="flex"
       direction="column"
       align="center"

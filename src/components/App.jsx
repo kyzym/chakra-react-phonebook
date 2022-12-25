@@ -15,7 +15,6 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route
           index
-          path="/"
           element={
             <RestrictedRoute>
               <HomePage />
