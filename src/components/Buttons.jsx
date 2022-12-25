@@ -70,6 +70,7 @@ export const RegisterBTN = () => {
         bg: 'blue.500',
         color: 'white',
       }}
+      ml={1}
     >
       Register
     </Button>

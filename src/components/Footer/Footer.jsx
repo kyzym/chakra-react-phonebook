@@ -2,7 +2,6 @@ import {
   Box,
   chakra,
   Container,
-  Divider,
   Stack,
   Text,
   useColorModeValue,

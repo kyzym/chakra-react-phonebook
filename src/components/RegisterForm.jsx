@@ -22,7 +22,7 @@ export const RegisterForm = ({ handleSignUp }) => {
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
     >
-      <Stack spacing={3} mx={'auto'} maxW={'lg'} py={6} px={3}>
+      <Stack spacing={1} mx={'auto'} maxW={'lg'} py={3} px={3}>
         <Stack align={'center'}>
           <Heading fontSize={'2xl'} textAlign={'center'}>
             Sign up to your account
@@ -37,7 +37,7 @@ export const RegisterForm = ({ handleSignUp }) => {
           boxShadow={'lg'}
           p={8}
         >
-          <Stack spacing={2} as="form" onSubmit={handleSignUp}>
+          <Stack spacing={1} as="form" onSubmit={handleSignUp}>
             <FormControl id="firstName" isRequired>
               <FormLabel>Nickname</FormLabel>
               <Input

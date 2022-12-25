@@ -8,7 +8,6 @@ export const AuthNav = () => {
       h={16}
       alignItems={'center'}
       justifyContent={'space-between'}
-      direction={{ base: 'column', md: 'row' }}
     >
       <RegisterBTN />
       <LoginBTN />

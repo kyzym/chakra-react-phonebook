@@ -27,7 +27,7 @@ export const LoginForm = ({ handleLogin }) => {
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
     >
-      <Stack spacing={3} mx={'auto'} maxW={'lg'} py={6} px={3}>
+      <Stack spacing={3} mx={'auto'} maxW={'lg'} py={3} px={3}>
         <Stack align={'center'}>
           <Heading fontSize={'2xl'}>Sign in to your account </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
@@ -43,18 +43,12 @@ export const LoginForm = ({ handleLogin }) => {
           <Stack spacing={2} as="form" onSubmit={handleLogin}>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input
-                size="lg"
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-              />
+              <Input type="email" name="email" placeholder="Enter your email" />
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
                 <Input
-                  size="lg"
                   type={showPassword ? 'text' : 'password'}
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
