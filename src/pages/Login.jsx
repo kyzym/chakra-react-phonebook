@@ -1,5 +1,5 @@
 import { useToast } from '@chakra-ui/react';
-import { LoginForm } from 'components/LoginForm/LoginForm';
+import { LoginForm } from 'components/LoginForm';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
 import { useLogInUserMutation } from 'redux/contactsSlice';

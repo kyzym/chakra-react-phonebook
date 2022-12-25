@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useGetContactsQuery } from 'redux/contactsSlice';
 import { selectFilter } from 'redux/filter/selectors';
 
-import { ContactsListItem } from '../ContactListItem/ContactsListItem';
+import { ContactsListItem } from './ContactsListItem';
 
 import { List, ListIcon, ListItem } from '@chakra-ui/layout';
 import { BsPhone } from 'react-icons/bs';

@@ -1,7 +1,7 @@
 import { Flex, Heading } from '@chakra-ui/layout';
 import { useColorModeValue } from '@chakra-ui/react';
 import { ContactsList, Filter, Form } from 'components';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { FcContacts, FcList } from 'react-icons/fc';
 
 export default function Contacts() {

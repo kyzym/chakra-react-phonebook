@@ -3,7 +3,7 @@ import { Toaster } from 'react-hot-toast';
 import { AppBar } from './AppBar';
 import { Suspense } from 'react';
 import { Divider } from '@chakra-ui/layout';
-import Footer from './Footer/Footer';
+import Footer from './Footer';
 
 export const Layout = () => {
   return (
