@@ -1,5 +1,5 @@
+import { useToast } from '@chakra-ui/react';
 import { LoginForm } from 'components/LoginForm/LoginForm';
-import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
 import { useLogInUserMutation } from 'redux/contactsSlice';
@@ -7,6 +7,7 @@ import { useLogInUserMutation } from 'redux/contactsSlice';
 export default function Login() {
   const [loginUser] = useLogInUserMutation();
   const dispatch = useDispatch();
+  const toast = useToast();
 
   const handleLogin = async e => {
     e.preventDefault();
@@ -17,7 +18,13 @@ export default function Login() {
     }).unwrap();
 
     const userName = res.user.name;
-    userName && toast.success(`hello ${userName}`);
+    userName &&
+      toast({
+        position: 'top',
+        title: `Hello ${userName} 🥳`,
+        status: 'success',
+        isClosable: true,
+      });
 
     dispatch(setCredentials(res));
 
@@ -26,5 +33,3 @@ export default function Login() {
 
   return <LoginForm handleLogin={handleLogin} />;
 }
-
-// export default Login;

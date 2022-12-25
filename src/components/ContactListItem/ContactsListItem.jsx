@@ -1,15 +1,23 @@
 import { BsTrash } from 'react-icons/bs';
 import { Text } from '@chakra-ui/layout';
-import { Button } from '@chakra-ui/react';
-import { toast } from 'react-hot-toast';
+import { Button, useToast } from '@chakra-ui/react';
+
 import { useDeleteContactMutation } from 'redux/contactsSlice';
 
 export const ContactsListItem = ({ contact: { name, number, id } }) => {
   const [deleteContact, { isLoading, isSuccess }] = useDeleteContactMutation();
+  const toast = useToast();
 
   const handleDelete = () => {
-    deleteContact(id).then(toast.success(`OK, we've removed -  ${name} `));
+    deleteContact(id).unwrap();
+    toast({
+      position: 'top',
+      title: `OK, we've removed -  ${name} `,
+      status: 'success',
+      isClosable: true,
+    });
   };
+
   const checkIsDeleted = isLoading || isSuccess;
 
   return (

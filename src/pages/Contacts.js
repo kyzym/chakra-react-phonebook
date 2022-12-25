@@ -5,7 +5,7 @@ import { Loader } from 'components/Loader/Loader';
 import { FcContacts, FcList } from 'react-icons/fc';
 
 export default function Contacts() {
-  const bgColor = useColorModeValue('gray.200', 'gray.700');
+  const bgColor = useColorModeValue('gray.50', 'gray.700');
 
   return (
     <Flex
