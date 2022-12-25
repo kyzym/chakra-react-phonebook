@@ -1,15 +1,15 @@
-import { NavLink } from 'react-router-dom';
-import css from './AuthNav.module.css';
+import {
+  LoginBTN,
+  RegisterBTN,
+  SwitchColorModeBTN,
+} from 'components/NavBtns/NavBtns';
+import { Flex } from '@chakra-ui/layout';
 
 export const AuthNav = () => {
   return (
-    <div>
-      <NavLink className={css.link} to="/register">
-        Register
-      </NavLink>
-      <NavLink className={css.link} to="/login">
-        Log In
-      </NavLink>
-    </div>
+    <Flex alignItems={'center'}>
+      <RegisterBTN />
+      <LoginBTN />
+    </Flex>
   );
 };

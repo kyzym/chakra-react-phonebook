@@ -7,7 +7,7 @@ import Footer from './Footer/Footer';
 
 export const Layout = () => {
   return (
-    <Box name="LayoutWrapper" display="flex" flexDir="column" h="100%-50%">
+    <Box name="LayoutWrapper">
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />

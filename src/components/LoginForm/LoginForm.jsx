@@ -11,9 +11,11 @@ import {
   Heading,
   Text,
   Flex,
+  Link,
 } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const LoginForm = ({ handleLogin }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -45,7 +47,7 @@ export const LoginForm = ({ handleLogin }) => {
                 size="lg"
                 type="email"
                 name="email"
-                placeholder="enter your cool email"
+                placeholder="Enter your email"
               />
             </FormControl>
             <FormControl id="password" isRequired>
@@ -87,6 +89,20 @@ export const LoginForm = ({ handleLogin }) => {
               >
                 Sign in
               </Button>
+            </Stack>
+            <Stack pt={1}>
+              <Text align={'center'} fontSize={'xl'}>
+                Need an account? Register now!
+                <Link
+                  as={NavLink}
+                  to="/register"
+                  color={'blue.400'}
+                  fontSize={'2xl'}
+                  ml="1"
+                >
+                  Sign Up
+                </Link>
+              </Text>
             </Stack>
           </Stack>
         </Box>
