@@ -1,20 +1,14 @@
 import { selectIsLoggedIn } from 'redux/auth/authSelectors';
 import { useSelector } from 'react-redux';
-import { ContactsBTN, HomeBTN } from 'components/NavBtns/NavBtns';
+import { ContactsBTN, HomeBTN } from 'components/Buttons/Buttons';
 import { Flex } from '@chakra-ui/layout';
 
 export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <Flex
-      as="nav"
-      h={16}
-      alignItems={'center'}
-      justifyContent={'space-between'}
-    >
+    <Flex>
       <HomeBTN />
-
       {isLoggedIn && <ContactsBTN />}
     </Flex>
   );

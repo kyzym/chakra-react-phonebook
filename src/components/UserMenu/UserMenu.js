@@ -4,7 +4,7 @@ import { unsetCredentials } from 'redux/auth/authSlice';
 import { useDispatch } from 'react-redux';
 import { Badge, Flex } from '@chakra-ui/layout';
 import { Text } from '@chakra-ui/react';
-import { LogoutBTN } from 'components/NavBtns/NavBtns';
+import { LogoutBTN } from 'components/Buttons/Buttons';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export const UserMenu = () => {
 
   return (
     <Flex align="center" gap={'12px'}>
-      <Text fontSize="lg" fontWeight="bold">
+      <Text fontSize="lg" ml={2} fontWeight="bold">
         Welcome
         <Badge ml="1" fontSize="1.2em" variant="subtle" colorScheme="green">
           {user.name}

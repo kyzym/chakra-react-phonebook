@@ -15,8 +15,8 @@ const SocialButton = ({ children, label, href }) => {
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       target="_blank"
       rounded={'full'}
-      w={8}
-      h={8}
+      w={12}
+      h={12}
       cursor={'pointer'}
       as={'a'}
       href={href}
@@ -42,6 +42,7 @@ export default function Footer() {
       color={useColorModeValue('gray.700', 'gray.200')}
     >
       <Container
+        className="footerContainer"
         as={Stack}
         maxW={'6xl'}
         py={4}
@@ -50,19 +51,21 @@ export default function Footer() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text>2022 Denys Kyzym 😉</Text>
+        <Text fontSize={'xl'} as="b">
+          2022 Denys Kyzym 😉
+        </Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton
             label={'LinkedIn'}
             href={'https://www.linkedin.com/in/denys-kyzym/'}
           >
-            <FaLinkedin />
+            <FaLinkedin size={30} />
           </SocialButton>
           <SocialButton
             label={'Github'}
             href={'https://github.com/kyzym?tab=repositories'}
           >
-            <FaGithub />
+            <FaGithub size={30} />
           </SocialButton>
         </Stack>
       </Container>

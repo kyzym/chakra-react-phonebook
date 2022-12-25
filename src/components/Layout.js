@@ -9,6 +9,7 @@ export const Layout = () => {
   return (
     <Box name="LayoutWrapper">
       <AppBar />
+      <Divider />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

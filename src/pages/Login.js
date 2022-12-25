@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
 import { useLogInUserMutation } from 'redux/contactsSlice';
 
-export const Login = () => {
+export default function Login() {
   const [loginUser] = useLogInUserMutation();
   const dispatch = useDispatch();
 
@@ -25,6 +25,6 @@ export const Login = () => {
   };
 
   return <LoginForm handleLogin={handleLogin} />;
-};
+}
 
-export default Login;
+// export default Login;

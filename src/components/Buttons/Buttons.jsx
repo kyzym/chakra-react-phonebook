@@ -5,7 +5,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const HomeBTN = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -45,7 +45,7 @@ export const ContactsBTN = () => {
         bg: 'blue.500',
         color: 'white',
       }}
-      ml={1}
+      ml={3}
       _activeLink={{ bg: 'blue.500', color: 'white' }}
     >
       Contacts
@@ -106,7 +106,7 @@ export const LogoutBTN = ({ handleLogOut }) => {
   return (
     <Button
       onClick={handleLogOut}
-      display={{ base: 'none', md: 'inline-flex' }}
+      display={'inline-flex'}
       fontSize={'xl'}
       fontWeight={600}
       color={color}
@@ -133,6 +133,35 @@ export const SwitchColorModeBTN = () => {
         }}
       >
         {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+      </Button>
+    </Stack>
+  );
+};
+
+export const HeroSignButtons = () => {
+  return (
+    <Stack spacing={6} direction={'row'}>
+      <Button
+        as={Link}
+        to="/login"
+        color="white"
+        px={12}
+        fontSize={{ base: 'xl', md: '2xl' }}
+        bg={'blue.400'}
+        _hover={{ bg: 'blue.500' }}
+      >
+        Login
+      </Button>
+      <Button
+        as={Link}
+        to="/register"
+        fontSize={{ base: 'xl', md: '2xl' }}
+        color="white"
+        px={12}
+        bg={'blue.400'}
+        _hover={{ bg: 'blue.500' }}
+      >
+        Register
       </Button>
     </Stack>
   );
