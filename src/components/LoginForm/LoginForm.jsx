@@ -19,6 +19,7 @@ import { NavLink } from 'react-router-dom';
 
 export const LoginForm = ({ handleLogin }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const bgColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
     <Flex
@@ -26,7 +27,7 @@ export const LoginForm = ({ handleLogin }) => {
       minH={{ base: '78vh', md: '83.7vh', lg: '81vh' }}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', 'gray.800')}
+      bg={bgColor}
     >
       <Stack spacing={1} mx={'auto'} maxW={'lg'} py={3} px={3}>
         <Stack align={'center'}>
