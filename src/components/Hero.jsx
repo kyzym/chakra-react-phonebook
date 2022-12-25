@@ -1,5 +1,5 @@
 import { Container, Heading, Stack, Text } from '@chakra-ui/react';
-import { HeroSignButtons } from './Buttons/Buttons';
+import { HeroSignButtons } from './Buttons';
 
 export default function Hero() {
   return (

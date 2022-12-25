@@ -1,10 +1,10 @@
-import { Navigation } from '../Navigation/Navigation';
-import { UserMenu } from '../UserMenu/UserMenu';
-import { AuthNav } from '../AuthNav/AuthNav';
+import { Navigation } from './Navigation/Navigation';
+import { UserMenu } from './UserMenu/UserMenu';
+import { AuthNav } from './AuthNav';
 
 import { useAuth } from 'hooks/hooks';
 
-import { SwitchColorModeBTN } from 'components/Buttons/Buttons';
+import { SwitchColorModeBTN } from 'components/Buttons';
 import { Box, Container, Flex } from '@chakra-ui/layout';
 import { useColorModeValue } from '@chakra-ui/react';
 

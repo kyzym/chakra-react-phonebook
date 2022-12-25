@@ -4,7 +4,7 @@ import { unsetCredentials } from 'redux/auth/authSlice';
 import { useDispatch } from 'react-redux';
 import { Badge, Flex } from '@chakra-ui/layout';
 import { Text } from '@chakra-ui/react';
-import { LogoutBTN } from 'components/Buttons/Buttons';
+import { LogoutBTN } from 'components/Buttons';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();

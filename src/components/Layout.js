@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { AppBar } from './AppBar/AppBar';
+import { AppBar } from './AppBar';
 import { Suspense } from 'react';
 import { Box, Divider } from '@chakra-ui/layout';
 import Footer from './Footer/Footer';

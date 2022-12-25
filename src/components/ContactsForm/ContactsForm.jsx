@@ -3,8 +3,13 @@ import {
   useGetContactsQuery,
 } from 'redux/contactsSlice';
 
-import { Button, FormTag, Input, Label } from './ContactForm.styled';
-import { useToast } from '@chakra-ui/react';
+import {
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  Stack,
+  useToast,
+} from '@chakra-ui/react';
 
 export const Form = () => {
   const { data: contacts } = useGetContactsQuery();
@@ -46,33 +51,38 @@ export const Form = () => {
   };
 
   return (
-    <FormTag onSubmit={handleAddContact}>
-      <Label>
-        Name:
-        <Input
-          type="text"
-          name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Only letters, apostrophe, dash and spaces."
-          required
-          placeholder="Enter name"
-        />
-      </Label>
-      <Label>
-        Number:
-        <Input
-          type="tel"
-          name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-          placeholder="Enter number"
-        />
-      </Label>
-
-      <Button type="submit" disabled={isLoading}>
-        add contact
-      </Button>
-    </FormTag>
+    <>
+      <Stack as="form" spacing={4} onSubmit={handleAddContact}>
+        <InputGroup>
+          <InputLeftAddon children="Name:" w="6rem" fontSize="1.2em" />
+          <Input
+            type="text"
+            name="name"
+            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            title="Only letters, apostrophe, dash and spaces."
+            required
+            placeholder="Enter name"
+            w={{ base: '17rem', lg: '20rem' }}
+            fontSize="1.2em"
+          />
+        </InputGroup>
+        <InputGroup>
+          <InputLeftAddon children="Number:" w="6rem" fontSize="1.2em" />
+          <Input
+            type="tel"
+            name="number"
+            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required
+            placeholder="Enter phone number"
+            w={{ base: '17rem', lg: '20rem' }}
+            fontSize="1.2em"
+          />
+        </InputGroup>
+        <button type="submit" disabled={isLoading}>
+          add contact
+        </button>
+      </Stack>
+    </>
   );
 };

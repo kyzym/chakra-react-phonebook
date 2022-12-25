@@ -1,18 +1,4 @@
-import styled from 'styled-components';
-
-export const Title = styled.h1`
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 10px;
-`;
-
-export const SubTitle = styled.h2`
-  display: flex;
-  align-items: flex-end;
-  gap: 6px;
-  margin-bottom: 10px;
-`;
+import styled from '@emotion/styled';
 
 export const FormTag = styled.form`
   display: flex;

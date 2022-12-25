@@ -1,29 +1,23 @@
-import { ContactsList, Filter, Form, SubTitle, Title } from 'components';
+import { Flex, Heading } from '@chakra-ui/layout';
+import { ContactsList, Filter, Form } from 'components';
 import { Loader } from 'components/Loader/Loader';
-import { Box } from 'components/utils/Box.styled';
 import { FcContacts, FcList } from 'react-icons/fc';
 
 export default function Contacts() {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      mt={10}
-      px={10}
-    >
-      <Title>
-        Phonebook
-        <FcContacts />
-      </Title>
+    <Flex direction="column" align="center" mt={10} px={10}>
+      <Heading as={'h1'} display="flex" alignItems="flex-end">
+        Phonebook <FcContacts />
+      </Heading>
+
       <Form />
-      <SubTitle>
-        Contacts
-        <FcList />
-      </SubTitle>
+      <Heading as={'h2'} display="flex" alignItems="flex-end">
+        Contacts <FcList />
+      </Heading>
+
       <Filter />
       <Loader />
       <ContactsList />
-    </Box>
+    </Flex>
   );
 }

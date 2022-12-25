@@ -2,7 +2,7 @@ import { useRegisterUserMutation } from 'redux/contactsSlice';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
 
-import { RegisterForm } from '../components/RegisterForm/RegisterForm';
+import { RegisterForm } from '../components/RegisterForm';
 
 export default function SignupCard() {
   const [registerUser] = useRegisterUserMutation();
