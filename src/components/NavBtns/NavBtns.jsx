@@ -1,17 +1,26 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { Button, Stack, useColorMode } from '@chakra-ui/react';
+import {
+  Button,
+  Stack,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 
 export const HomeBTN = () => {
+  const bgColor = useColorModeValue('gray.200', 'gray.700');
+  const color = useColorModeValue('black', 'white');
+
   return (
     <Button
       as={NavLink}
-      to="/home"
+      to="/"
       display={'inline-flex'}
       fontSize={'xl'}
       fontWeight={600}
-      color={'black'}
-      bg={'gray.200'}
+      color={color}
+      bg={bgColor}
+      _activeLink={{ bg: 'blue.500', color: 'white' }}
       _hover={{
         bg: 'blue.500',
         color: 'white',
@@ -30,12 +39,14 @@ export const ContactsBTN = () => {
       display={'inline-flex'}
       fontSize={'xl'}
       fontWeight={600}
-      color={'white'}
-      bg={'blue.500'}
+      color={'black'}
+      bg={'blue.100'}
       _hover={{
         bg: 'blue.500',
+        color: 'white',
       }}
       ml={1}
+      _activeLink={{ bg: 'blue.500', color: 'white' }}
     >
       Contacts
     </Button>
@@ -43,6 +54,9 @@ export const ContactsBTN = () => {
 };
 
 export const RegisterBTN = () => {
+  const bgColor = useColorModeValue('gray.200', 'gray.700');
+  const color = useColorModeValue('black', 'white');
+
   return (
     <Button
       as={NavLink}
@@ -50,8 +64,8 @@ export const RegisterBTN = () => {
       display={'inline-flex'}
       fontSize={'xl'}
       fontWeight={600}
-      color={'black'}
-      bg={'gray.200'}
+      color={color}
+      bg={bgColor}
       _hover={{
         bg: 'blue.500',
         color: 'white',
@@ -63,14 +77,17 @@ export const RegisterBTN = () => {
 };
 
 export const LoginBTN = () => {
+  const bgColor = useColorModeValue('gray.200', 'gray.700');
+  const color = useColorModeValue('black', 'white');
+
   return (
     <Button
       as={NavLink}
       to="/login"
       fontSize={'xl'}
       fontWeight={600}
-      color={'black'}
-      bg={'gray.200'}
+      color={color}
+      bg={bgColor}
       ml={1}
       _hover={{
         bg: 'blue.500',
@@ -83,14 +100,21 @@ export const LoginBTN = () => {
 };
 
 export const LogoutBTN = ({ handleLogOut }) => {
+  const bgColor = useColorModeValue('gray.200', 'gray.700');
+  const color = useColorModeValue('black', 'white');
+
   return (
     <Button
-      display={{ base: 'none', md: 'inline-flex' }}
-      fontSize={'sm'}
-      fontWeight={600}
-      color={'white'}
-      bg={'gray.500'}
       onClick={handleLogOut}
+      display={{ base: 'none', md: 'inline-flex' }}
+      fontSize={'xl'}
+      fontWeight={600}
+      color={color}
+      bg={bgColor}
+      _hover={{
+        bg: 'blue.500',
+        color: 'white',
+      }}
     >
       Logout
     </Button>
