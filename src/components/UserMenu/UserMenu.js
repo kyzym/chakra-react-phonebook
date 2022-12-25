@@ -1,10 +1,9 @@
 import { useAuth } from 'hooks/hooks';
-import css from './UserMenu.module.css';
 import { contactsSliceAPI, useLogOutUserMutation } from 'redux/contactsSlice';
 import { unsetCredentials } from 'redux/auth/authSlice';
 import { useDispatch } from 'react-redux';
 import { Badge, Flex } from '@chakra-ui/layout';
-import { Button, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import { LogoutBTN } from 'components/NavBtns/NavBtns';
 
 export const UserMenu = () => {

@@ -2,9 +2,7 @@ import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 
-import css from './AppBar.module.css';
 import { useAuth } from 'hooks/hooks';
-import Nav from 'components/header2';
 
 import { SwitchColorModeBTN } from 'components/NavBtns/NavBtns';
 import { Box, Flex } from '@chakra-ui/layout';

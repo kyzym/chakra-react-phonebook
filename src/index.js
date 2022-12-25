@@ -6,10 +6,9 @@ import { persistor, store } from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import { PersistGate } from 'redux-persist/integration/react';
-import { overridesDefault } from 'components/theme';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ChakraProvider theme={overridesDefault}>
+  <ChakraProvider>
     <BrowserRouter>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>

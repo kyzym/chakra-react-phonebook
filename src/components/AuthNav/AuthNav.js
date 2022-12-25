@@ -1,9 +1,5 @@
-import {
-  LoginBTN,
-  RegisterBTN,
-  SwitchColorModeBTN,
-} from 'components/NavBtns/NavBtns';
 import { Flex } from '@chakra-ui/layout';
+import { LoginBTN, RegisterBTN } from 'components/NavBtns/NavBtns';
 
 export const AuthNav = () => {
   return (
