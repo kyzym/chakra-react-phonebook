@@ -42,10 +42,13 @@ export const App = () => {
         <Route
           path="contacts"
           element={
-            <PrivateRoute>
-              <ContactsPage />
-            </PrivateRoute>
+            <PrivateRoute component={ContactsPage} redirectTo="/login" />
           }
+          // element={
+          //   <PrivateRoute>
+          //     <ContactsPage />
+          //   </PrivateRoute>
+          // }
         />
 
         <Route path="*" element={<Navigate to="/" replace />} />
