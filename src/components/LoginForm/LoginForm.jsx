@@ -22,12 +22,13 @@ export const LoginForm = ({ handleLogin }) => {
 
   return (
     <Flex
-      minH={'30vh'}
+      className="loginForm"
+      minH={{ base: '78vh', md: '83.7vh', lg: '81vh' }}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
     >
-      <Stack spacing={3} mx={'auto'} maxW={'lg'} py={3} px={3}>
+      <Stack spacing={1} mx={'auto'} maxW={'lg'} py={3} px={3}>
         <Stack align={'center'}>
           <Heading fontSize={'2xl'}>Sign in to your account </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
