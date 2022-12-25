@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/phonebook-rtk-query/static/js/main.686b2ac2.js",
-    "static/js/690.68161def.chunk.js": "/phonebook-rtk-query/static/js/690.68161def.chunk.js",
-    "static/js/756.3e959f92.chunk.js": "/phonebook-rtk-query/static/js/756.3e959f92.chunk.js",
+    "main.js": "/phonebook-rtk-query/static/js/main.3a43afeb.js",
+    "static/js/690.819fd0b2.chunk.js": "/phonebook-rtk-query/static/js/690.819fd0b2.chunk.js",
+    "static/js/756.cfefdbb8.chunk.js": "/phonebook-rtk-query/static/js/756.cfefdbb8.chunk.js",
     "static/js/800.69389c5f.chunk.js": "/phonebook-rtk-query/static/js/800.69389c5f.chunk.js",
-    "static/js/420.42b7ef2a.chunk.js": "/phonebook-rtk-query/static/js/420.42b7ef2a.chunk.js",
+    "static/js/420.5d366c8d.chunk.js": "/phonebook-rtk-query/static/js/420.5d366c8d.chunk.js",
     "static/js/824.782ce9b0.chunk.js": "/phonebook-rtk-query/static/js/824.782ce9b0.chunk.js",
     "static/js/699.a29daf0b.chunk.js": "/phonebook-rtk-query/static/js/699.a29daf0b.chunk.js",
     "index.html": "/phonebook-rtk-query/index.html",
-    "main.686b2ac2.js.map": "/phonebook-rtk-query/static/js/main.686b2ac2.js.map",
-    "690.68161def.chunk.js.map": "/phonebook-rtk-query/static/js/690.68161def.chunk.js.map",
-    "756.3e959f92.chunk.js.map": "/phonebook-rtk-query/static/js/756.3e959f92.chunk.js.map",
+    "main.3a43afeb.js.map": "/phonebook-rtk-query/static/js/main.3a43afeb.js.map",
+    "690.819fd0b2.chunk.js.map": "/phonebook-rtk-query/static/js/690.819fd0b2.chunk.js.map",
+    "756.cfefdbb8.chunk.js.map": "/phonebook-rtk-query/static/js/756.cfefdbb8.chunk.js.map",
     "800.69389c5f.chunk.js.map": "/phonebook-rtk-query/static/js/800.69389c5f.chunk.js.map",
-    "420.42b7ef2a.chunk.js.map": "/phonebook-rtk-query/static/js/420.42b7ef2a.chunk.js.map",
+    "420.5d366c8d.chunk.js.map": "/phonebook-rtk-query/static/js/420.5d366c8d.chunk.js.map",
     "824.782ce9b0.chunk.js.map": "/phonebook-rtk-query/static/js/824.782ce9b0.chunk.js.map",
     "699.a29daf0b.chunk.js.map": "/phonebook-rtk-query/static/js/699.a29daf0b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.686b2ac2.js"
+    "static/js/main.3a43afeb.js"
   ]
 }
