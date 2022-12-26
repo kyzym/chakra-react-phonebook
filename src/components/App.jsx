@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout';
-import { PrivateRoute } from './routes/PrivateRoute';
-import { RestrictedRoute } from './routes/RestrictedRoute';
+// import { PrivateRoute } from './routes/PrivateRoute';
+// import { RestrictedRoute } from './routes/RestrictedRoute';
 
 const LoginPage = lazy(() => import('pages/Login'));
 const RegisterPage = lazy(() => import('pages/Register'));
