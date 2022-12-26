@@ -17,12 +17,7 @@ export const RegisterForm = ({ handleSignUp }) => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
-    <Flex
-      minH={{ base: '78vh', md: '83.7vh', lg: '85vh' }}
-      align={'center'}
-      justify={'center'}
-      bg={bgColor}
-    >
+    <Flex align={'center'} justify={'center'} bg={bgColor}>
       <Stack spacing={1} mx={'auto'} maxW={'lg'} py={3} px={3}>
         <Stack align={'center'}>
           <Heading fontSize={'2xl'} textAlign={'center'}>

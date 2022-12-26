@@ -47,7 +47,6 @@ export const App = () => {
             </PrivateRoute>
           }
         />
-
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
