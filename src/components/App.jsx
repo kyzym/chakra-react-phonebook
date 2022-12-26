@@ -16,35 +16,35 @@ export const App = () => {
         <Route
           index
           element={
-            <RestrictedRoute>
-              <HomePage />
-            </RestrictedRoute>
+            // <RestrictedRoute>
+            <HomePage />
+            // </RestrictedRoute>
           }
         />
         <Route
           path="register"
           element={
-            <RestrictedRoute>
-              <RegisterPage />
-            </RestrictedRoute>
+            // <RestrictedRoute>
+            <RegisterPage />
+            // </RestrictedRoute>
           }
         />
 
         <Route
           path="login"
           element={
-            <RestrictedRoute>
-              <LoginPage />
-            </RestrictedRoute>
+            // <RestrictedRoute>
+            <LoginPage />
+            // </RestrictedRoute>
           }
         />
 
         <Route
           path="contacts"
           element={
-            <PrivateRoute>
-              <ContactsPage />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <ContactsPage />
+            // </PrivateRoute>
           }
         />
 
