@@ -7,8 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import { PersistGate } from 'redux-persist/integration/react';
 
-//  basename = '/goit-react-hw-08-phonebook/';
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/goit-react-hw-08-phonebook/">
     <ChakraProvider>

@@ -1,7 +1,7 @@
 import {
   useAddContactMutation,
   useGetContactsQuery,
-} from 'redux/contactsSlice';
+} from 'redux/contacts/contactsSlice';
 
 import {
   Button,
@@ -63,7 +63,7 @@ export const Form = () => {
             title="Only letters, apostrophe, dash and spaces."
             required
             placeholder="Enter name"
-            w={{ base: '17rem', lg: '17rem' }}
+            w="17rem"
             fontSize="1em"
           />
         </InputGroup>
@@ -76,7 +76,7 @@ export const Form = () => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             placeholder="Enter phone number"
-            w={{ base: '15rem', lg: '17rem' }}
+            w="17rem"
             fontSize="1em"
           />
         </InputGroup>

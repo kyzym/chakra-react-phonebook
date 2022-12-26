@@ -2,7 +2,7 @@ import { BsTrash } from 'react-icons/bs';
 import { Text } from '@chakra-ui/layout';
 import { Button, useToast } from '@chakra-ui/react';
 
-import { useDeleteContactMutation } from 'redux/contactsSlice';
+import { useDeleteContactMutation } from 'redux/contacts/contactsSlice';
 
 export const ContactsListItem = ({ contact: { name, number, id } }) => {
   const [deleteContact, { isLoading, isSuccess }] = useDeleteContactMutation();
@@ -25,7 +25,7 @@ export const ContactsListItem = ({ contact: { name, number, id } }) => {
       <Text
         ml={'5%'}
         mr={'auto'}
-        fontSize={{ md: 'l', lg: 'l' }}
+        fontSize={{ md: 'lg', lg: 'lg' }}
         fontWeight={'500'}
       >
         {name}
@@ -34,7 +34,7 @@ export const ContactsListItem = ({ contact: { name, number, id } }) => {
         ml={'auto'}
         mr={'5%'}
         fontWeight={'500'}
-        fontSize={{ md: 'l', lg: 'l' }}
+        fontSize={{ md: 'lg', lg: 'lg' }}
       >
         {number}
       </Text>

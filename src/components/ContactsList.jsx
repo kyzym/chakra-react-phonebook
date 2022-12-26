@@ -1,6 +1,6 @@
 import { ContactsNotification } from 'components';
 import { useSelector } from 'react-redux';
-import { useGetContactsQuery } from 'redux/contactsSlice';
+import { useGetContactsQuery } from 'redux/contacts/contactsSlice';
 import { selectFilter } from 'redux/filter/selectors';
 
 import { ContactsListItem } from './ContactsListItem';
@@ -20,7 +20,7 @@ export const ContactsList = () => {
 
   return (
     <>
-      <List spacing={2} w={{ md: '430px', lg: '450px' }}>
+      <List spacing={2} w={{ base: '384px', lg: '450px' }}>
         {visibleContacts.map(contact => (
           <ListItem
             key={contact.id}
@@ -30,7 +30,7 @@ export const ContactsList = () => {
           >
             <ListIcon
               as={BsPhone}
-              boxSize={{ md: 5, lg: 6 }}
+              boxSize={{ base: 5, md: 6, lg: 7 }}
               color="blue.500"
             />
             <ContactsListItem contact={contact} />

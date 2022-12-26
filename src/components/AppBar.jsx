@@ -15,8 +15,9 @@ export const AppBar = () => {
     <Box as="header" bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
       <Container maxW={'6xl'} py={4}>
         <Flex
+          name="InsideAppBarBox"
           h={6}
-          justify={{ base: 'center', md: 'space-between' }}
+          justify={{ base: 'space-evenly', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}
         >
           <Navigation />

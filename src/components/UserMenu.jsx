@@ -1,5 +1,8 @@
 import { useAuth } from 'hooks/hooks';
-import { contactsSliceAPI, useLogOutUserMutation } from 'redux/contactsSlice';
+import {
+  contactsSliceAPI,
+  useLogOutUserMutation,
+} from 'redux/contacts/contactsSlice';
 import { unsetCredentials } from 'redux/auth/authSlice';
 import { useDispatch } from 'react-redux';
 import { Badge, Flex } from '@chakra-ui/layout';
@@ -18,7 +21,7 @@ export const UserMenu = () => {
   };
 
   return (
-    <Flex align="center" gap={'12px'}>
+    <Flex name="userMenu" align="center" gap={'12px'}>
       <Text ml={2} fontWeight="bold">
         Welcome
         <Badge ml="1" fontSize="1em" variant="subtle" colorScheme="green">

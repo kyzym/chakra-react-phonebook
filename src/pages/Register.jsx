@@ -1,4 +1,4 @@
-import { useRegisterUserMutation } from 'redux/contactsSlice';
+import { useRegisterUserMutation } from 'redux/contacts/contactsSlice';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from 'redux/auth/authSlice';
 

@@ -1,4 +1,4 @@
-const { useGetContactsQuery } = require('redux/contactsSlice');
+const { useGetContactsQuery } = require('redux/contacts/contactsSlice');
 
 export const Loader = () => {
   const { error, isLoading } = useGetContactsQuery();
