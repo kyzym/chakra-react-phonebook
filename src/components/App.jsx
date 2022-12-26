@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout';
 import { PrivateRoute } from './routes/PrivateRoute';
-// import { RestrictedRoute } from './routes/RestrictedRoute';
+import { RestrictedRoute } from './routes/RestrictedRoute';
 
 const LoginPage = lazy(() => import('pages/Login'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -16,26 +16,26 @@ export const App = () => {
         <Route
           index
           element={
-            // <RestrictedRoute>
-            <HomePage />
-            // </RestrictedRoute>
+            <RestrictedRoute>
+              <HomePage />
+            </RestrictedRoute>
           }
         />
         <Route
           path="register"
           element={
-            //   <RestrictedRoute>
-            <RegisterPage />
-            //   </RestrictedRoute>
+            <RestrictedRoute>
+              <RegisterPage />
+            </RestrictedRoute>
           }
         />
 
         <Route
           path="login"
           element={
-            //  <RestrictedRoute>
-            <LoginPage />
-            //  </RestrictedRoute>
+            <RestrictedRoute>
+              <LoginPage />
+            </RestrictedRoute>
           }
         />
 
