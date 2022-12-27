@@ -60,7 +60,7 @@ export const RegisterForm = ({ handleSignUp }) => {
                   size="md"
                   type={showPassword ? 'text' : 'password'}
                   name="password"
-                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                  pattern="(?=.*\d).{7,}"
                   placeholder="7 characters or more, please"
                 />
                 <InputRightElement h={'full'}>

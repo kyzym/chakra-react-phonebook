@@ -9,14 +9,14 @@ import {
   InputGroup,
   InputLeftAddon,
   Stack,
-  useToast,
 } from '@chakra-ui/react';
+import { usePreparedToast } from 'hooks/hooks';
 
 export const Form = () => {
   const { data: contacts } = useGetContactsQuery();
-  const toast = useToast();
 
   const [addContact, { isLoading }] = useAddContactMutation();
+  const { contactAddedToast, existingContactToast } = usePreparedToast();
 
   const handleAddContact = e => {
     e.preventDefault();
@@ -31,22 +31,12 @@ export const Form = () => {
       )
     ) {
       form.reset();
-      return toast({
-        position: 'top-center',
-        title: `Can't add already existing contact 😭`,
-        status: 'info',
-        isClosable: true,
-      });
+      return existingContactToast();
     }
 
-    addContact({ name: nameValue, number: numberValue });
-
-    toast({
-      position: 'top',
-      title: 'Superrr!!! Contact added 🥳',
-      status: 'success',
-      isClosable: true,
-    });
+    addContact({ name: nameValue, number: numberValue }).then(
+      contactAddedToast()
+    );
 
     form.reset();
   };

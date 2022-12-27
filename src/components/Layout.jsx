@@ -13,11 +13,7 @@ export const Layout = () => {
     <>
       <AppBar />
       <Divider />
-      <Box
-        as="main"
-        minH={{ base: '78vh', md: '83.7vh', lg: '85vh' }}
-        bg={bgColor}
-      >
+      <Box as="main" flex={'1 1 auto'} bg={bgColor}>
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
