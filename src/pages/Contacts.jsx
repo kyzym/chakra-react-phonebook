@@ -15,6 +15,7 @@ export default function Contacts() {
       pt={10}
       px={10}
       bg={bgColor}
+      h="100%"
     >
       <Heading
         as={'h1'}
