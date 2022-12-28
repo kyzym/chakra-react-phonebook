@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/layout';
-import { LoginBTN, RegisterBTN } from 'components/Buttons';
+import { AuthRegBts } from 'components/Buttons';
 
 export const AuthNav = () => {
   return (
@@ -9,8 +9,8 @@ export const AuthNav = () => {
       alignItems={'center'}
       justifyContent={'space-between'}
     >
-      <RegisterBTN />
-      <LoginBTN />
+      <AuthRegBts role={'Login'} path={'login'} mlSize={1} />
+      <AuthRegBts role={'Register'} path={'register'} mlSize={1} />
     </Flex>
   );
 };

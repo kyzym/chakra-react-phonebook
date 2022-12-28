@@ -5,64 +5,42 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export const HomeBTN = () => {
-  const bgColor = useColorModeValue('gray.200', 'gray.700');
-  const color = useColorModeValue('black', 'white');
+export const HeaderBtn = ({ role, path, mlSize }) => {
+  const bgColor = useColorModeValue('blue.500', 'blue.600');
+  const color = useColorModeValue('white', 'white');
 
   return (
     <Button
-      as={NavLink}
-      to="/"
+      as={Link}
+      to={path}
       display={'inline-flex'}
-      fontSize={'l'}
+      fontSize={'lg'}
       fontWeight={600}
       color={color}
       bg={bgColor}
-      _activeLink={{ bg: 'blue.500', color: 'white' }}
       _hover={{
-        bg: 'blue.500',
+        bg: 'blue.400',
         color: 'white',
       }}
+      ml={mlSize}
     >
-      Home
+      {role}
     </Button>
   );
 };
 
-export const ContactsBTN = () => {
-  return (
-    <Button
-      as={NavLink}
-      to="/contacts"
-      display={'inline-flex'}
-      fontSize={'l'}
-      fontWeight={600}
-      color={'black'}
-      bg={'blue.100'}
-      _hover={{
-        bg: 'blue.500',
-        color: 'white',
-      }}
-      ml={3}
-      _activeLink={{ bg: 'blue.500', color: 'white' }}
-    >
-      Contacts
-    </Button>
-  );
-};
-
-export const RegisterBTN = () => {
+export const AuthRegBts = ({ role, path, mlSize }) => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const color = useColorModeValue('black', 'white');
 
   return (
     <Button
-      as={NavLink}
-      to="/register"
+      as={Link}
+      to={path}
       display={'inline-flex'}
-      fontSize={'l'}
+      fontSize={'lg'}
       fontWeight={600}
       color={color}
       bg={bgColor}
@@ -70,32 +48,9 @@ export const RegisterBTN = () => {
         bg: 'blue.500',
         color: 'white',
       }}
-      ml={1}
+      ml={mlSize}
     >
-      Register
-    </Button>
-  );
-};
-
-export const LoginBTN = () => {
-  const bgColor = useColorModeValue('gray.200', 'gray.700');
-  const color = useColorModeValue('black', 'white');
-
-  return (
-    <Button
-      as={NavLink}
-      to="/login"
-      fontSize={'l'}
-      fontWeight={600}
-      color={color}
-      bg={bgColor}
-      ml={1}
-      _hover={{
-        bg: 'blue.500',
-        color: 'white',
-      }}
-    >
-      Login
+      {role}
     </Button>
   );
 };
@@ -108,7 +63,7 @@ export const LogoutBTN = ({ handleLogOut }) => {
     <Button
       onClick={handleLogOut}
       display={'inline-flex'}
-      fontSize={'l'}
+      fontSize={'lg'}
       fontWeight={600}
       color={color}
       bg={bgColor}
@@ -147,7 +102,7 @@ export const HeroSignButtons = () => {
         to="/login"
         color="white"
         px={12}
-        fontSize={{ base: 'l', md: 'xl' }}
+        fontSize={{ base: 'lg', md: 'xl' }}
         bg={'blue.400'}
         _hover={{ bg: 'blue.500' }}
       >
@@ -156,7 +111,7 @@ export const HeroSignButtons = () => {
       <Button
         as={Link}
         to="/register"
-        fontSize={{ base: 'l', md: 'xl' }}
+        fontSize={{ base: 'lg', md: 'xl' }}
         color="white"
         px={12}
         bg={'blue.400'}
