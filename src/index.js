@@ -6,9 +6,10 @@ import { persistor, store } from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import { PersistGate } from 'redux-persist/integration/react';
+import { Toaster } from 'react-hot-toast';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  //
+  //basename="/goit-react-hw-08-phonebook/"
   <BrowserRouter basename="/goit-react-hw-08-phonebook/">
     <ChakraProvider>
       <Provider store={store}>
@@ -17,5 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </PersistGate>
       </Provider>
     </ChakraProvider>
+    <div>
+      <Toaster />
+    </div>
   </BrowserRouter>
 );

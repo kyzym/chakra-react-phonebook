@@ -10,13 +10,13 @@ import {
   InputLeftAddon,
   Stack,
 } from '@chakra-ui/react';
-import { usePreparedToast } from 'hooks/hooks';
+
+import { toast } from 'react-hot-toast';
 
 export const Form = () => {
   const { data: contacts } = useGetContactsQuery();
 
   const [addContact, { isLoading }] = useAddContactMutation();
-  const { contactAddedToast, existingContactToast } = usePreparedToast();
 
   const handleAddContact = e => {
     e.preventDefault();
@@ -31,11 +31,15 @@ export const Form = () => {
       )
     ) {
       form.reset();
-      return existingContactToast();
+      return toast.error(`Can't add already existing contact 😭`, {
+        position: 'top-center',
+      });
     }
 
     addContact({ name: nameValue, number: numberValue }).then(
-      contactAddedToast()
+      toast.success(`Superrr!!! Contact ${nameValue} added 🥳`, {
+        position: 'top-center',
+      })
     );
 
     form.reset();

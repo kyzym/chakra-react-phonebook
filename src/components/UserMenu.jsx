@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { Badge, Flex } from '@chakra-ui/layout';
 import { Text } from '@chakra-ui/react';
 import { LogoutBTN } from 'components/Buttons';
+import { toast } from 'react-hot-toast';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,9 @@ export const UserMenu = () => {
     await logOutUser();
     dispatch(unsetCredentials());
     dispatch(contactsSliceAPI.util.resetApiState());
+    toast.success(`Good bye ${user.name} 👏`, {
+      position: 'top-center',
+    });
   };
 
   return (
