@@ -1,6 +1,8 @@
 # React Phonebook
 
-<img width="222" alt="image" src="https://github.com/kyzym/react-phonebook/assets/102521716/8e1dca33-39b5-4c31-aead-658d2e6a3da6">
+<img width="222" alt="image" src="https://github.com/kyzym/goit-react-hw-08-phonebook/assets/102521716/6baa75bc-b06e-4d54-8002-425178ce23ea">
+<img width="222" height="260" alt="image" src="https://github.com/kyzym/react-phonebook/assets/102521716/8e1dca33-39b5-4c31-aead-658d2e6a3da6">
+
 
 Welcome to the **React Phonebook** project, a modern and user-friendly phonebook application built with the power of React.js, Redux, Redux Toolkit, Chakra UI, and Styled-System.
 
