@@ -9,8 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Toaster } from 'react-hot-toast';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  //basename="/goit-react-hw-08-phonebook/"
-  <BrowserRouter basename="/goit-react-hw-08-phonebook/">
+  <BrowserRouter basename="/chakra-react-phonebook/">
     <ChakraProvider>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
