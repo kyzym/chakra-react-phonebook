@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "chakra-react-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kyzym.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://kyzym.github.io/chakra-react-phonebook/",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.14",
     "@chakra-ui/layout": "^2.1.11",
