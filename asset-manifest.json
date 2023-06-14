@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.f67c4ea6.js",
-    "static/js/319.1be05e21.chunk.js": "/goit-react-hw-08-phonebook/static/js/319.1be05e21.chunk.js",
-    "static/js/285.41a62d8f.chunk.js": "/goit-react-hw-08-phonebook/static/js/285.41a62d8f.chunk.js",
-    "static/js/760.1bb34dc9.chunk.js": "/goit-react-hw-08-phonebook/static/js/760.1bb34dc9.chunk.js",
-    "static/js/198.242d96c2.chunk.js": "/goit-react-hw-08-phonebook/static/js/198.242d96c2.chunk.js",
-    "static/js/824.db9b1a13.chunk.js": "/goit-react-hw-08-phonebook/static/js/824.db9b1a13.chunk.js",
-    "static/js/699.a29daf0b.chunk.js": "/goit-react-hw-08-phonebook/static/js/699.a29daf0b.chunk.js",
-    "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.f67c4ea6.js.map": "/goit-react-hw-08-phonebook/static/js/main.f67c4ea6.js.map",
-    "319.1be05e21.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/319.1be05e21.chunk.js.map",
-    "285.41a62d8f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/285.41a62d8f.chunk.js.map",
-    "760.1bb34dc9.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/760.1bb34dc9.chunk.js.map",
-    "198.242d96c2.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/198.242d96c2.chunk.js.map",
-    "824.db9b1a13.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/824.db9b1a13.chunk.js.map",
-    "699.a29daf0b.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/699.a29daf0b.chunk.js.map"
+    "main.js": "/chakra-react-phonebook/static/js/main.fcab6a96.js",
+    "static/js/319.0994bda2.chunk.js": "/chakra-react-phonebook/static/js/319.0994bda2.chunk.js",
+    "static/js/285.f610b45f.chunk.js": "/chakra-react-phonebook/static/js/285.f610b45f.chunk.js",
+    "static/js/760.e85e5113.chunk.js": "/chakra-react-phonebook/static/js/760.e85e5113.chunk.js",
+    "static/js/198.6f11cff3.chunk.js": "/chakra-react-phonebook/static/js/198.6f11cff3.chunk.js",
+    "static/js/824.513fab8f.chunk.js": "/chakra-react-phonebook/static/js/824.513fab8f.chunk.js",
+    "static/js/699.799e3670.chunk.js": "/chakra-react-phonebook/static/js/699.799e3670.chunk.js",
+    "index.html": "/chakra-react-phonebook/index.html",
+    "main.fcab6a96.js.map": "/chakra-react-phonebook/static/js/main.fcab6a96.js.map",
+    "319.0994bda2.chunk.js.map": "/chakra-react-phonebook/static/js/319.0994bda2.chunk.js.map",
+    "285.f610b45f.chunk.js.map": "/chakra-react-phonebook/static/js/285.f610b45f.chunk.js.map",
+    "760.e85e5113.chunk.js.map": "/chakra-react-phonebook/static/js/760.e85e5113.chunk.js.map",
+    "198.6f11cff3.chunk.js.map": "/chakra-react-phonebook/static/js/198.6f11cff3.chunk.js.map",
+    "824.513fab8f.chunk.js.map": "/chakra-react-phonebook/static/js/824.513fab8f.chunk.js.map",
+    "699.799e3670.chunk.js.map": "/chakra-react-phonebook/static/js/699.799e3670.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f67c4ea6.js"
+    "static/js/main.fcab6a96.js"
   ]
 }
