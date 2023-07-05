@@ -4,7 +4,8 @@
 <img width="222" height="260" alt="image" src="https://github.com/kyzym/react-phonebook/assets/102521716/8e1dca33-39b5-4c31-aead-658d2e6a3da6">
 
 
-Welcome to the **React Phonebook** project, a modern and user-friendly phonebook application built with the power of React.js, Redux, Redux Toolkit, Chakra UI, and Styled-System.
+Welcome to the **React Phonebook** project, a modern and user-friendly phonebook application built with the power of TypeScript, React.js, Redux, Redux Toolkit, Chakra UI, and Styled-System.
+
 
 This application allows you to store and manage contacts seamlessly, with an intuitive user interface and efficient functionality. 
 
@@ -53,11 +54,9 @@ To run the project locally:
 npm start
 ```
 
-The application should now be running on [http://localhost:3000](http://localhost:3000).
-
 ## 🤝 Contributing
 
-We welcome contributions from the community. To contribute:
+I welcome contributions from the community. To contribute:
 
 1. 🍴 Fork the project.
 2. 🌳 Create a new branch.
@@ -69,4 +68,4 @@ We welcome contributions from the community. To contribute:
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-We hope you enjoy using **React Phonebook**. Your feedback and suggestions are welcome!
+I hope you enjoy using **React Phonebook**. Your feedback and suggestions are welcome!
